@@ -231,8 +231,7 @@ class TensorboardVisualizer(AbstractVisualizer):
             opt -- stores all the experiment flags; needs to be a subclass of BaseOptions
         Step 1: Cache the training/test options
         Step 2: Initialize tensorboard
-        Step 3: create an HTML object for saving HTML files
-        Step 4: create a logging file to store training losses
+        Step 3: create a logging file to store training losses
         """
         self.opt = opt  # cache the option
         self.name = opt.name
