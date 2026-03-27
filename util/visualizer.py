@@ -250,7 +250,7 @@ class TensorboardVisualizer(AbstractVisualizer):
         """Save current results to tensorboard."""
 
         for label, t_image in visuals.items():
-            grid = torchvision.utils.make_grid(t_image, value_range=[-1, 1])
+            grid = torchvision.utils.make_grid(t_image, normalize=True, value_range=(-1, 1))
             self.writer.add_image(label, grid, total_iters)
 
     def plot_current_losses(self, total_iters, losses):
